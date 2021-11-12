@@ -54,25 +54,25 @@ const controls = new OrbitControls(camera, renderer.domElement);
 // const spaceTexture = new THREE.TextureLoader().load('./images/FS.jpg');
 // scene.background = spaceTexture;
 
+// J PICTURED BOX
 document.body.onscroll = moveCamera
 
-// J  PICTURED BOX
 const jonTexture = new THREE.TextureLoader().load('./images/jCircle.png');
+
 const jon = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
   new THREE.MeshBasicMaterial( {map: jonTexture })
 )
+
 scene.add(jon);
 
 // J MOON
-const moonTexture = new THREE.TextureLoader().load('./images/jCircle.png');
-// const normalTexture = new THREE.TextureLoader().load('./images/jCircle.png');
+const moonTexture = new THREE.TextureLoader().load('./images/moon.jpg');
 
 const moon = new THREE.Mesh(
 new THREE.SphereGeometry(3,32,32),
-new THREE.MeshStandardMaterial( {
+new THREE.MeshBasicMaterial( {
   map: moonTexture, 
-  // normalMap: normalTexture
 })
 );
 
@@ -84,14 +84,9 @@ scene.add(moon)
 function animate() {
   requestAnimationFrame(animate);
 
-  jon.position.x = 7;
-  jon.rotation.x += 0.015;
-  jon.rotation.y += 0.015;
-  jon.rotation.z += 0.015;
-
-  moon.rotation.x += 0.015;
-  moon.rotation.y += 0.015;
-  moon.rotation.z += 0.015;
+  moon.rotation.x += 0.05;
+  moon.rotation.y += 0.075;
+  moon.rotation.z += 0.05;
 
   // jon.rotation.y += 0.01;
   // jon.rotation.z += 0.01;
