@@ -5,5 +5,38 @@ canvas{
 }
 
 main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
   position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+header {
+  background: var(--dark-bh);
+  grid-column: 2 / span 5;
+  font-size: 2.5 rem;
+  padding: 2rem;
+  margin-bottom: var(--spacing);
+}
+
+section{
+  grid-column: 2 / 8;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem !important;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  margin-bottom: var(--spacing);
 }

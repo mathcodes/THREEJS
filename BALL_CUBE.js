@@ -26,33 +26,33 @@ scene.add( pointLight, ambientLight )
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
-// J TORUS
-// const geometry = new THREE.TorusGeometry( 10, 3, 16, 100 );
-// const material = new THREE.MeshStandardMaterial( { color: 0xffffff });
-// const torus = new THREE.Mesh( geometry, material ); 
-// scene.add(torus)
+J TORUS
+const geometry = new THREE.TorusGeometry( 10, 3, 16, 100 );
+const material = new THREE.MeshStandardMaterial( { color: 0xffffff });
+const torus = new THREE.Mesh( geometry, material ); 
+scene.add(torus)
 
-// J TORUS 2
-// const geometry2 = new THREE.TorusGeometry( 8, 3, 16, 100 );
-// const material2 = new THREE.MeshStandardMaterial( { color: 0x999999 });// no light source required 
-// const torus2 = new THREE.Mesh( geometry2, material2 ); 
-// scene.add(torus2)
+J TORUS 2
+const geometry2 = new THREE.TorusGeometry( 8, 3, 16, 100 );
+const material2 = new THREE.MeshStandardMaterial( { color: 0x999999 });// no light source required 
+const torus2 = new THREE.Mesh( geometry2, material2 ); 
+scene.add(torus2)
 
-// J STAR LOOP
-// function addStar() {
-//   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-//   const material = new THREE.MeshBasicMaterial({ color: 0xffffff })
-//   const star = new THREE.Mesh( geometry, material );
-//   const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread( 100 ) );
-//   star.position.set(x, y, z);
-//   scene.add(star)
-// }
-// Array(1000).fill().forEach(addStar)
+J STAR LOOP
+function addStar() {
+  const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+  const material = new THREE.MeshBasicMaterial({ color: 0xffffff })
+  const star = new THREE.Mesh( geometry, material );
+  const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread( 100 ) );
+  star.position.set(x, y, z);
+  scene.add(star)
+}
+Array(1000).fill().forEach(addStar)
 
-// const spaceTexture = new THREE.TextureLoader();
-// scene.background = spaceTexture;
-// const spaceTexture = new THREE.TextureLoader().load('./images/FS.jpg');
-// scene.background = spaceTexture;
+const spaceTexture = new THREE.TextureLoader();
+scene.background = spaceTexture;
+const spaceTexture = new THREE.TextureLoader().load('./images/FS.jpg');
+scene.background = spaceTexture;
 
 document.body.onscroll = moveCamera
 
